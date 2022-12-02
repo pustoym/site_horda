@@ -1,0 +1,43 @@
+.scroll-top-btn {
+  position: fixed;
+
+  /* bottom: -100px; */
+  right: 0;
+  bottom: 25px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 10px 0 0 10px;
+  background: $green;
+  opacity: 0;
+  transition: background-color transform $duration-normal $easeOut;
+  transform: translate3d(0, 100px, 0);
+
+  @include hover-focus {
+    background-color: $green-lighten;
+  }
+
+  @include vp-767 {
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: auto;
+      height: 25px;
+    }
+  }
+}
+
+.scroll-top-btn.is-shown {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* @media (max-width: 29.99875em) {
+  .scroll-top-btn {
+    bottom: -35px;
+  }
+} */

@@ -1,0 +1,39 @@
+.projects {
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+
+    @include vp-767 {
+      max-width: 83.3%;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 25px;
+
+    @include vp-991 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__carousel {
+    overflow: visible;
+
+    @include vp-767 {
+      padding-bottom: 0;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+    }
+  }
+
+  &__link-more {
+    @include vp-991 {
+      display: none;
+    }
+  }
+}

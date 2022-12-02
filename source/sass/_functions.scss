@@ -1,0 +1,23 @@
+/* ======================================
+   $CVW
+   ====================================== */
+
+@function cvw($width) {
+  @return calc(100vw * ($width / $vp-1920));
+}
+
+@function cvw-xl($width) {
+  @return calc(100vw * ($width / $vp-1440));
+}
+
+@function cvw-l($width) {
+  @return calc(100vw * ($width / $vp-1280));
+}
+
+@function cvw-t($width) {
+  @return calc(100vw * ($width / $vp-992));
+}
+
+@function cvw-m($width) {
+  @return calc(100vw * ($width / $vp-768));
+}

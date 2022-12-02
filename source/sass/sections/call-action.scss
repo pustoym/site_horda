@@ -1,0 +1,174 @@
+.call-action {
+  $block: &;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+
+    @include vp-991 {
+      grid-template-rows: auto auto;
+      column-gap: 20px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__left-col {
+    grid-column: 1/6;
+    padding-top: 5px;
+
+    @include vp-1279 {
+      grid-column: 1/7;
+    }
+
+    @include vp-991 {
+      grid-column: 1/9;
+      padding-top: 0;
+      padding-bottom: 118px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto;
+      padding-bottom: 115px;
+    }
+  }
+
+  &__right-col {
+    grid-column: span 4 / 12;
+    padding-top: 45px;
+
+    @include vp-1279 {
+      grid-column: span 5 / 13;
+    }
+
+    @include vp-991 {
+      grid-row: 2/3;
+      grid-column: span 7 / 13;
+      padding-top: 0;
+    }
+
+    @include vp-767 {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+
+    @include vp-767 {
+      margin-bottom: 10px;
+      font-size: 28px;
+      line-height: 33px;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 28px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__form-frame {
+    max-width: 410px;
+
+    @include vp-991 {
+      max-width: 100%;
+    }
+
+    @include vp-767 {
+      max-width: 300px;
+    }
+  }
+
+  &_bg-modern {
+    background-image: url("../img/bg/bg-call2action.png");
+    background-position: right bottom 27px;
+    background-repeat: no-repeat;
+
+    @include vp-1279 {
+      background-position: right -340px bottom;
+    }
+
+    @include vp-991 {
+      background-position: bottom 51px center;
+    }
+
+    @include vp-767 {
+      background-image: url("../img/bg/bg-call2action-tablet.png");
+      background-position: center 114px;
+    }
+
+    @include vp-374 {
+      background-image: url("../img/bg/bg-call2action-mobile.png");
+      background-position: center 114px;
+    }
+  }
+
+  &_bg-house {
+    background-image: url("../img/bg/bg-house.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+
+    @include vp-1439 {
+      background-size: 60%;
+    }
+
+    @include vp-991 {
+      background-image: url("../img/bg/bg-house_tablet.png");
+      background-position: center bottom 40px;
+      background-size: auto;
+    }
+
+    @include vp-767 {
+      background-image: url("../img/bg/bg-house_mobile.png");
+      background-position: center top 92px;
+    }
+
+    @include vp-374 {
+      background-image: url("../img/bg/bg-house_mobile.png");
+      background-position: left top 92px;
+    }
+  }
+
+  &_grid-center {
+    #{$block}__left-col {
+      align-self: center;
+      padding-top: 0;
+
+      @include vp-1279 {
+        align-self: auto;
+      }
+
+      @include vp-991 {
+        padding-bottom: 47px;
+      }
+
+      @include vp-767 {
+        padding-bottom: 8px;
+      }
+    }
+
+    #{$block}__right-col {
+      padding-top: 28px;
+
+      @include vp-991 {
+        grid-column: 5/12;
+        padding-top: 0;
+      }
+    }
+  }
+}

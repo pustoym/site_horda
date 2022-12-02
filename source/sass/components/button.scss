@@ -1,0 +1,148 @@
+.button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  gap: 0.7em;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  background-color: $green;
+  color: $white;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: all $duration-normal $easeOut;
+
+  @include vp-991 {
+    gap: 1em;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  @include hover-focus {
+    color: $black;
+    outline: none;
+
+    &::after {
+      left: 0;
+      width: 110%;
+    }
+
+    &::before,
+    svg {
+      transform: rotate(180deg);
+      transition: inherit;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background-color: $green-lighten;
+    transition: all $duration-normal $easeOut;
+  }
+
+  &::before {
+    font-size: 8px;
+
+    @include vp-991 {
+      font-size: 5px;
+    }
+  }
+
+  &:active {
+    top: 2px;
+
+    &::after {
+      box-shadow: 0 0 5px rgb(207 232 213 / 88%), inset 0 0 7px #abdbb7;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background: #e4e4e4;
+  }
+
+  &_hover_border {
+    @include hover-focus {
+      outline: 1px solid $green;
+    }
+  }
+
+  &_bordered {
+    border: 1px solid $green;
+    background-color: $transparent;
+    color: $green;
+
+    @include hover-focus {
+      color: $white;
+
+      &::after {
+        background-color: $green;
+      }
+    }
+
+    &:active {
+      &::after {
+        box-shadow: 0 0 5px rgb(0 0 0 / 25%), inset 0 0 17px rgb(255 255 255 / 25%);
+      }
+    }
+  }
+
+  &_fw {
+    width: 100%;
+  }
+
+  &_white {
+    color: $green;
+    box-shadow: 0 0 5px rgb(77 77 77 / 20%);
+    background: $white;
+  }
+
+  &_transparent {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: $transparent;
+    color: $green;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+
+    @include vp-767 {
+      padding: 1.5em 2em;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    @include hover-focus {
+      color: $green-lighten;
+      transition: color $duration-normal $easeOut;
+
+      &::before {
+        transform: rotate(180deg);
+        transition: all $duration-normal $easeOut;
+      }
+    }
+
+    &::after {
+      content: none;
+    }
+
+    svg {
+      width: 36px;
+      height: auto;
+    }
+  }
+}

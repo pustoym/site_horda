@@ -1,0 +1,75 @@
+// Colors
+// ---------------------------------
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-white-smoke: #f2f2f2;
+  --color-green: #1b5027;
+  --color-green-lighten: #cfe8d5;
+  --border-radius: 10px;
+}
+
+$black: var(--color-black, #000000);
+$white: var(--color-white, #ffffff);
+$green: var(--color-green, #1b5027);
+$green-lighten: var(--color-green-lighten, #cfe8d5);
+$transparent: rgb(255 255 255 / 0%);
+
+// Gradient
+
+$black-to-right: linear-gradient(90deg, rgb(0 0 0 / 75%) 0%, rgb(0 0 0 / 0%) 75%);
+
+// Typography
+// ---------------------------------
+
+// переменная используемая в html для подключения скейлинга
+$fz-default: 16px;
+
+// у некоторых шрифтов в ios возникают проблемы с символом рубля
+// https://www.artlebedev.ru/kovodstvo/sections/159/#13
+$ff-rouble: "Rouble", "Arial", sans-serif;
+$ff: "Mulish", "Arial", sans-serif;
+$ff-raleway: "Raleway", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+
+
+// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-600: 0.6s $tf-default;
+
+// EASING TRANSITIONS
+$easeOut: cubic-bezier(0, 0, 0.58, 1);
+$duration-normal: 0.4s;
+
+// $easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+// $easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+// $easing-out: ease-out;
+// $easing-in: ease-in;
+
+// Viewports
+// ---------------------------------
+
+$vp-1920: 1920px;
+$vp-1440: 1440px;
+$vp-1280: 1280px;
+
+// $vp-1024: 1024px;
+$vp-992: 992px;
+$vp-768: 768px;
+$vp-375: 375px;
+$vp-320: 320px;
+
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

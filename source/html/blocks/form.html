@@ -1,0 +1,32 @@
+<div class="form
+            @@if (context.bemElement) {@@bemElement}
+            @@if (context.bemMod) {form_@@bemMod}">
+  <form action="#" method="post">
+    <h3 class="form__title">
+      @@title
+    </h3>
+    @@if (context.dsc) {
+      <p class="form__dsc">@@dsc</p>
+    }
+    <div class="form__inputs-wrap">
+      <div class="form__input-wrap custom-input custom-input_icon-user">
+        <input type="text" placeholder="Имя">
+      </div>
+      <div class="form__input-wrap custom-input custom-input_icon-phone">
+        <input type="tel" placeholder="Телефон" >
+      </div>
+
+      <button type="submit" class="form__button button  button_fw">
+        Рассчитать стоимость
+        <svg width="36" height="8">
+          <use xlink:href="#arrow-right-36"></use>
+        </svg>
+      </button>
+
+      <p class="form__agreement">
+        Нажимая на кнопку вы соглашаетесь с
+        <a href="">обработкой персональных данных</a>
+      </p>
+    </div>
+  </form>
+</div>

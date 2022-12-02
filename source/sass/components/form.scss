@@ -1,0 +1,95 @@
+.form {
+  width: 100%;
+  padding: 30px 25px 40px;
+  border-radius: 20px;
+  color: $black;
+  background: rgb(255 255 255 / 85%);
+  backdrop-filter: blur(10px);
+
+  @include vp-767 {
+    padding-bottom: 20px;
+  }
+
+  &__inputs-wrap {
+    margin-top: 20px;
+
+    @include vp-767 {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+
+    @include vp-991 {
+      color: #393939;
+    }
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &__dsc {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 19px;
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__input-wrap {
+    margin-bottom: 10px;
+
+    @include vp-767 {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__button {
+    min-height: 70px;
+    margin-bottom: 15px;
+
+    @include vp-767 {
+      justify-content: center;
+      min-height: 50px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    svg {
+      @include vp-767 {
+        width: 28px;
+        height: 6px;
+      }
+    }
+  }
+
+  &__agreement {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &_text-center {
+    text-align: center;
+  }
+
+  a {
+    color: $green;
+    text-decoration: underline;
+    transition:
+      color $trans-default,
+      text-decoration $trans-default;
+
+    @include hover-focus {
+      text-decoration: underline dotted $green-lighten;
+    }
+  }
+}
