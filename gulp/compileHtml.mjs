@@ -10,7 +10,7 @@ import imgToPicture from 'gulp-html-php-picture';
 import versionNumber from 'gulp-version-number';
 
 const compileHtml = () => {
-  return gulp.src(['source/*.html'])
+  return gulp.src(['source/html/*.html'])
       .pipe(plumber({
         errorHandler(err) {
           notify.onError({

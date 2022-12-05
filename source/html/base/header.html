@@ -1,0 +1,54 @@
+<header class="header @@if (context.mod) { header--@@mod }">
+  <div class="header__container">
+    @@if (!context.index) {
+    <a class="header__logo" href="/index.html">
+      <svg width="190" height="64">
+        <use xlink:href="#logo-white"></use>
+      </svg>
+    </a>
+    }
+    @@if (context.index) {
+    <span class="header__logo">
+      <picture>
+        <source
+                media="(min-width: 991.98px)"
+                srcset="img/svg/logo.svg">
+        <img src="img/svg/logo-white.svg" width="140" alt="Логотип строительной компании «Хорда»">
+      </picture>
+    </span>
+    }
+    <div class="header__menu menu">
+      <button type="button" class="menu__btn" id="burgerMainMenu" aria-label="Открыть меню навигации" aria-pressed="false">
+        <span class="icon-menu"><i></i></span>
+      </button>
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link @@if (context.headerActiveLinkIndex === 0) { is-active }" @@if (context.headerActiveLinkIndex !== 0) { href="/projects.html" }>Проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@if (context.headerActiveLinkIndex === 1) { is-active }" @@if (context.headerActiveLinkIndex !== 1) { href="/services.html" }>Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@if (context.headerActiveLinkIndex === 2) { is-active }" @@if (context.headerActiveLinkIndex !== 2) { href="/technology.html" }>Технологии</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@if (context.headerActiveLinkIndex === 3) { is-active }" @@if (context.headerActiveLinkIndex !== 3) { href="/about.html" }>О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@if (context.headerActiveLinkIndex === 4) { is-active }" @@if (context.headerActiveLinkIndex !== 4) { href="/news.html" }>Новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link @@if (context.headerActiveLinkIndex === 5) { is-active }" @@if (context.headerActiveLinkIndex !== 5) { href="/clients.html" }>Клиентам</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="header__button button button_bordered">
+      Оставить заявку
+      <svg width="21" height="4">
+        <use xlink:href="#arrow-right-21"></use>
+      </svg>
+    </button>
+  </div>
+</header>

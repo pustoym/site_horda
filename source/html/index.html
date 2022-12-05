@@ -2,25 +2,10 @@
 <html lang="ru">
 
 <head>
-  <title>Хорда — строительная компания</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Строим качественные дома вашей мечты!">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="robots" content="noindex, nofollow">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#ffc40d">
-  <meta name="theme-color" content="#ffffff">
-
-  <link rel="preload" href="fonts/raleway-v28-cyrillic-regular.woff2" as="font" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="css/style.min.css">
+  @@include("source/html/base/head.html",{
+  "title": 'Хорда — строительная компания',
+  "description": 'Строим качественные дома вашей мечты!',
+  })
   <script async src="https://zachestnyibiznes.ru/js/zchb-widget.js"></script>
 </head>
 
@@ -31,82 +16,39 @@
   </div>
 
   <div class="wrapper">
-    <div class="bg-wrapper">
-      <header class="header">
-        <div class="header__container">
-          <a class="header__logo">
-            <picture>
-              <source
-                      media="(min-width: 991.98px)"
-                      srcset="img/svg/logo.svg">
-              <img src="img/svg/logo-white.svg" width="140" alt="Логотип строительной компании «Хорда»">
-            </picture>
-          </a>
-          <div class="header__menu menu">
-            <button type="button" class="menu__btn" id="burgerMainMenu" aria-label="Открыть меню навигации">
-              <span class="icon-menu"><i></i></span>
-            </button>
-            <nav class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a class="menu__link">Проекты</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Услуги</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Технологии</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">О нас</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Новости</a>
-                </li>
-                <li class="menu__item">
-                  <a class="menu__link">Клиентам</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <button class="header__button button button_bordered">
-            Оставить заявку
-            <svg width="21" height="4">
-              <use xlink:href="#arrow-right-21"></use>
-            </svg>
-          </button>
-        </div>
-      </header>
-      <section class="page__main-block main-block">
-        <div class="main-block__container">
-          <div class="main-block__content">
-            <h1 class="main-block__title">Строим качественные дома вашей мечты!</h1>
-            <p class="main-block__text">
-              Построим любой дом вашей мечты, который ляляля
-            </p>
-            <a class="main-block__button button">
-              Рассчитать стоимость
-              <svg width="36" height="8">
-                <use xlink:href="#arrow-right-36"></use>
-              </svg>
-            </a>
-          </div>
+    @@include("source/html/base/header.html",{
+      "index": true,
+    })
+    <main>
+      <section class="main-block  main-block--bg-main">
+        <div class="container">
+          <div class="main-block__inner">
+            <div class="main-block__content">
+              <h1 class="main-block__title">Строим качественные дома вашей мечты!</h1>
+              <p class="main-block__text">
+                Построим любой дом вашей мечты, который ляляля
+              </p>
+              <a class="main-block__button button">
+                Рассчитать стоимость
+                <svg width="36" height="8">
+                  <use xlink:href="#arrow-right-36"></use>
+                </svg>
+              </a>
+            </div>
 
-          <div class="main-block__watch watch">
-            <a class="watch__play">
-              <span class="visually-hidden">Открыть видео</span>
-              <svg width="25" height="21">
-                <use xlink:href="#watch-play"></use>
-              </svg>
-            </a>
-            <p class="watch__text">Посмотреть как строится дом прямо сейчас</p>
+            <div class="main-block__watch watch">
+              <a class="watch__play">
+                <span class="visually-hidden">Открыть видео</span>
+                <svg width="25" height="21">
+                  <use xlink:href="#watch-play"></use>
+                </svg>
+              </a>
+              <p class="watch__text">Посмотреть как строится дом прямо сейчас</p>
+            </div>
           </div>
         </div>
       </section>
-    </div>
-
-    <main class="page">
-      <section class="page__projects projects">
+      <section class="section section--projects projects">
         <div class="projects__container">
           <div class="projects__top">
             <h2 class="projects__title">
@@ -116,10 +58,11 @@
           <div class="projects__content">
             <div class="projects__carousel swiper" data-slider="projects">
               <div class="swiper-wrapper">
-                <div class="project-item carousel__slide">
+                <div class="project-item swiper-slide">
                   <div class="project-item__image-ibg">
                     <picture>
-                      <source srcset="img/content/projects/01.webp" type="image/webp"><img src="img/content/projects/01.jpg" alt=""
+                      <source srcset="img/content/projects/01.webp" type="image/webp"><img
+                           src="img/content/projects/01.jpg" alt=""
                            width="410" />
                     </picture>
 
@@ -166,10 +109,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-item carousel__slide">
+                <div class="project-item swiper-slide">
                   <div class="project-item__image-ibg">
                     <picture>
-                      <source srcset="img/content/projects/01.webp" type="image/webp"><img src="img/content/projects/01.jpg" width="410"
+                      <source srcset="img/content/projects/01.webp" type="image/webp"><img
+                           src="img/content/projects/01.jpg" width="410"
                            alt="" />
                     </picture>
 
@@ -216,10 +160,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-item carousel__slide">
+                <div class="project-item swiper-slide">
                   <div class="project-item__image-ibg">
                     <picture>
-                      <source srcset="img/content/projects/01.webp" type="image/webp"><img src="img/content/projects/01.jpg" width="410"
+                      <source srcset="img/content/projects/01.webp" type="image/webp"><img
+                           src="img/content/projects/01.jpg" width="410"
                            alt="" />
                     </picture>
 
@@ -266,10 +211,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-item carousel__slide">
+                <div class="project-item swiper-slide">
                   <div class="project-item__image-ibg">
                     <picture>
-                      <source srcset="img/content/projects/01.webp" type="image/webp"><img src="img/content/projects/01.jpg" width="410"
+                      <source srcset="img/content/projects/01.webp" type="image/webp"><img
+                           src="img/content/projects/01.jpg" width="410"
                            alt="" />
                     </picture>
 
@@ -316,10 +262,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-item carousel__slide">
+                <div class="project-item swiper-slide">
                   <div class="project-item__image-ibg">
                     <picture>
-                      <source srcset="img/content/projects/01.webp" type="image/webp"><img src="img/content/projects/01.jpg" width="410"
+                      <source srcset="img/content/projects/01.webp" type="image/webp"><img
+                           src="img/content/projects/01.jpg" width="410"
                            alt="" />
                     </picture>
 
@@ -366,10 +313,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-item carousel__slide">
+                <div class="project-item swiper-slide">
                   <div class="project-item__image-ibg">
                     <picture>
-                      <source srcset="img/content/projects/01.webp" type="image/webp"><img src="img/content/projects/01.jpg" width="410"
+                      <source srcset="img/content/projects/01.webp" type="image/webp"><img
+                           src="img/content/projects/01.jpg" width="410"
                            alt="" />
                     </picture>
 
@@ -426,7 +374,7 @@
         </div>
       </section>
 
-      <section class="page__call-action call-action call-action_bg-modern">
+      <section class="section section--call-action call-action call-action_bg-modern">
         <div class="call-action__container">
           <div class="call-action__left-col">
             <h2 class="call-action__title">
@@ -445,7 +393,7 @@
         </div>
       </section>
 
-      <section class="page__object-type object-type">
+      <section class="section section--object-type object-type">
         <div class="object-type__container">
           <h2 class="object-type__title">
             Какой будем строить объект?
@@ -560,7 +508,7 @@
           </div>
         </div>
       </section>
-      <section class="page__about about">
+      <section class="section section--about about">
         <div class="about__container">
           <div class="about__left-col">
             <div class="about__image-wrapper">
@@ -600,7 +548,7 @@
           </div>
         </div>
       </section>
-      <section class="page__advantages advantages">
+      <section class="section section--advantages advantages">
         <div class="advantages__container">
           <div class="advantages__inner">
             <h2 class="advantages__title">Почему мы?</h2>
@@ -648,7 +596,7 @@
         </div>
       </section>
 
-      <section class="page__charity charity">
+      <section class="section section--charity charity">
         <div class="charity__container">
           <div class="charity__inner">
             <div class="charity__content">
@@ -669,13 +617,14 @@
           </div>
         </div>
       </section>
-      <section class="page__stages stages">
+      <section class="section section--stages stages">
         <div class="stages__container">
           <div class="stages__headline">
             <h2 class="stages__title">
               Полный цикл строительства дома вашей мечты
             </h2>
-            <button class="stages__slider-arrow stages__slider-arrow_next button button_bordered" type="button" aria-label="Прокрутить к следующему слайду">
+            <button class="stages__slider-arrow stages__slider-arrow_next button button_bordered" type="button"
+                    aria-label="Прокрутить к следующему слайду">
               <svg width="41" height="21">
                 <use xlink:href="#arrow-right-41"></use>
               </svg>
@@ -820,7 +769,7 @@
         </div>
       </section>
 
-      <section class="page__works works">
+      <section class="section section--works works">
         <div class="works__container">
 
           <div class="works__slider swiper" data-slider="works">
@@ -899,13 +848,15 @@
 
             <div class="works__navigations">
 
-              <button class="works__navigation works__navigation_prev button button_white" aria-label="Перейти к предыдущей работе">
+              <button class="works__navigation works__navigation_prev button button_white"
+                      aria-label="Перейти к предыдущей работе">
                 <svg width="12" height="24">
                   <use xlink:href="#arrow-triangle"></use>
                 </svg>
               </button>
 
-              <button class="works__navigation works__navigation_next button button_white" aria-label="Перейти к следующей работе">
+              <button class="works__navigation works__navigation_next button button_white"
+                      aria-label="Перейти к следующей работе">
                 <svg width="12" height="24" style="transform: rotate(180deg);">
                   <use xlink:href="#arrow-triangle"></use>
                 </svg>
@@ -917,7 +868,7 @@
         </div>
       </section>
 
-      <section class="page__blog blog">
+      <section class="section section--blog blog">
         <div class="blog__container">
           <h2 class="blog__title">Блог</h2>
           <div class="blog__content">
@@ -1026,7 +977,7 @@
         </div>
       </section>
 
-      <section class="page__call-action call-action call-action_bg-house  call-action_grid-center">
+      <section class="section section--call-action call-action call-action_bg-house  call-action_grid-center">
         <div class="call-action__container">
           <div class="call-action__left-col">
             <h2 class="call-action__title">
@@ -1047,7 +998,7 @@
         </div>
       </section>
 
-      <section class="page__hero hero">
+      <section class="section section--hero hero">
         <div class="hero__inner">
           <div class="hero__container">
             <h2 class="hero__title visually-hidden">за честный бизнес</h2>
@@ -1059,7 +1010,7 @@
           </div>
         </div>
       </section>
-      <section class="page__contacts contacts">
+      <section class="section section--contacts contacts">
         <div class="contacts__container">
           <div class="contacts__content">
             <h2 class="contacts__title">Наши контакты</h2>
@@ -1080,13 +1031,16 @@
                 <svg width="18" height="18">
                   <use xlink:href="#icon-location"></use>
                 </svg>
-                <a href="https://yandex.ru/maps/213/moscow/?ll=37.555706%2C55.862040&mode=routes&rtext=~55.862040%2C37.555705&rtt=mt&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzAxMTAxMDE3EkDQoNC%2B0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0KHQtdC70LjQs9C10YDRgdC60LDRjyDRg9C70LjRhtCwLCAyIgoNCjkWQhW7cl9C&z=17.11">Москва, ул. Селигерская, д. 4, офис 522</a>
+                <a
+                   href="https://yandex.ru/maps/213/moscow/?ll=37.555706%2C55.862040&mode=routes&rtext=~55.862040%2C37.555705&rtt=mt&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNzAxMTAxMDE3EkDQoNC%2B0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0KHQtdC70LjQs9C10YDRgdC60LDRjyDRg9C70LjRhtCwLCAyIgoNCjkWQhW7cl9C&z=17.11">Москва,
+                  ул. Селигерская, д. 4, офис 522</a>
               </li>
             </ul>
           </div>
           <div class="contacts__map">
             <!-- <picture><source srcset="img/map.webp" type="image/webp"><img src="img/map.jpg" alt="Схема проезда в СК «Хорда»" /></picture> -->
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0617befa8544c599fdaa6d689081786b4e12bd64c59ec90a559bb1952189bba9&amp;source=constructor" width="100%" height="560" title="Карта расположения офиса СК «Хорда»"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0617befa8544c599fdaa6d689081786b4e12bd64c59ec90a559bb1952189bba9&amp;source=constructor"
+                    width="100%" height="560" title="Карта расположения офиса СК «Хорда»"></iframe>
 
           </div>
         </div>

@@ -35,7 +35,7 @@ const syncServer = () => {
     // tunnel: 'project-name',
   });
 
-  gulp.watch('source/**/*.html', gulp.series(html, refresh));
+  gulp.watch('source/html/**/*.html', gulp.series(html, refresh));
   gulp.watch('source/sass/**/*.{scss,sass,css}', streamStyles);
   gulp.watch('source/js/**/*.{js,json}', gulp.series(js, refresh));
   gulp.watch('source/img/**/*.svg', gulp.series(copySvg, sprite, html, refresh));
@@ -53,3 +53,4 @@ const dev = gulp.series(build, syncServer);
 const start = gulp.series(clean, createWebp, copy, sprite, gulp.parallel(styles, js, html), syncServer);
 
 export {optimizeImages as imagemin, createWebp as webp, validateHtml, build, dev, start};
+export {html}
