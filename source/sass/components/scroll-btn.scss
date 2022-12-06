@@ -11,10 +11,10 @@
   width: 70px;
   height: 70px;
   border-radius: 10px 0 0 10px;
+  transform: translate3d(0, 100px, 0);
   background: $green;
   opacity: 0;
   transition: background-color transform $duration-normal $easeOut;
-  transform: translate3d(0, 100px, 0);
 
   @include hover-focus {
     background-color: $green-lighten;
@@ -32,8 +32,8 @@
 }
 
 .scroll-top-btn.is-shown {
-  opacity: 1;
   transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 /* @media (max-width: 29.99875em) {

@@ -306,6 +306,13 @@
         "severity": "warning"
       }
     ],
+    "hue-degree-notation": "number",
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": ["grid-template"]
+      }
+    ],
     "scss/at-mixin-pattern": null,
     "scss/dollar-variable-pattern": null,
     "plugin/declaration-block-no-ignored-properties": [
