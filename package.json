@@ -82,6 +82,7 @@
     "node": ">=16.15.1"
   },
   "dependencies": {
+    "nouislider": "^15.6.1",
     "sal.js": "^0.8.5",
     "sweetalert": "^2.1.2",
     "swiper": "^8.4.4"

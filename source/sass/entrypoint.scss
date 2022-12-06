@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/nouislider";
 @import "vendor/legacy.css";
 @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/swiper/modules/pagination/pagination";
@@ -13,12 +14,13 @@
 @import "variables";
 @import "mixins";
 @import "functions";
-@import "global/reboot";
-@import "global/fonts";
-@import "global/utils";
+@import "global/typography";
 @import "global/keyframes";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
 @import "global/animations";
-@import "global/page";
+@import "global/section";
 
 // Components
 // ---------------------------------
@@ -35,6 +37,13 @@
 @import "components/work-item";
 @import "components/blog-item";
 
+// projects page
+
+@import "components/filter";
+@import "components/custom-select";
+@import "components/custom-radio";
+@import "components/custom-range";
+
 
 // Sections
 // ---------------------------------
@@ -42,6 +51,7 @@
 // @import "sections/${...}"
 
 @import "components/header";
+@import "components/menu";
 @import "sections/main-block";
 @import "sections/projects";
 @import "sections/call-action";

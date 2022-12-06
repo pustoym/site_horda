@@ -14,8 +14,10 @@
 
 $black: var(--color-black, #000000);
 $white: var(--color-white, #ffffff);
+$white-darken: var(--color-white-smoke, #f2f2f2);
 $green: var(--color-green, #1b5027);
 $green-lighten: var(--color-green-lighten, #cfe8d5);
+$gray-lighter: #c6c6c6;
 $transparent: rgb(255 255 255 / 0%);
 
 // Gradient
@@ -73,3 +75,8 @@ $vp-320: 320px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+// Retina
+// ---------------------------------
+
+$border-radius: var(--border-radius, 10px);

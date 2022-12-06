@@ -1,0 +1,93 @@
+<div class="filter">
+  <div class="container">
+    <div class="filter__inner">
+      <h1 class="filter__title">
+        Наши проекты
+      </h1>
+      <h2 class="filter__lead">
+        <svg>
+          <use xlink:href="#filter"></use>
+        </svg>
+        Фильтр
+      </h2>
+      <div class="filter__form-wrap">
+        <form>
+          <div class="filter__form-inner">
+
+            <fieldset class="filter__form-col custom-radio">
+              <legend class="field-title">Этажей</legend>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" type="radio" name="floor" value="1">
+                <span class="custom-radio__label-text">1</span>
+              </label>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" checked type="radio" name="floor" value="2">
+                <span class="custom-radio__label-text">2</span>
+              </label>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" type="radio" name="floor" value="3">
+                <span class="custom-radio__label-text">3</span>
+              </label>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" type="radio" name="floor" value="4">
+                <span class="custom-radio__label-text">4+</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="filter__form-col custom-radio">
+              <legend class="field-title">Спальни</legend>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" type="radio" name="bedroom" value="1">
+                <span class="custom-radio__label-text">1</span>
+              </label>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" type="radio" name="bedroom" value="2">
+                <span class="custom-radio__label-text">2</span>
+              </label>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" type="radio" name="bedroom" value="3" checked>
+                <span class="custom-radio__label-text">3</span>
+              </label>
+              <label class="custom-radio__label">
+                <input class="custom-radio__input" type="radio" name="bedroom" value="4+">
+                <span class="custom-radio__label-text">4+</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="filter__form-col filter__form-col--select-type">
+              <legend class="field-title">Тип проекта</legend>
+              <div class="custom-select" data-select="data-select" data-validate-type="select" data-name="project-type" data-id="filterProjectTypeSelect"><span class="custom-select__error">Выберите тип проекта</span>
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text"></span>
+                  <span class="custom-select__icon"></span>
+                </button>
+                <ul class="custom-select__list" role="listbox">
+                  <li class="custom-select__item" tabindex="0" data-select-value="individual" aria-selected="true" role="option">Индивидуальный</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="typical" aria-selected="false" role="option">Типовой</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="commercial" aria-selected="false" role="option">Коммерческий</li>
+                  <li class="custom-select__item" tabindex="0" data-select-value="all" aria-selected="false" role="option">Все проекты</li>
+                </ul>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter__form-col  filter__form-col--range">
+              <legend class="field-title  field-title--before-range">Общая площадь дома, м2</legend>
+              <div class="custom-range" data-range="filter-range"></div>
+            </fieldset>
+
+            <div class="filter__form-col  filter__form-col--button-submit">
+              <p class="filter__result-text">Найденно <output class="filter__result-output">25</output> проектов</p>
+              <button class="filter__button button" type="button">
+                Показать проекты
+                <svg width="36" height="8">
+                  <use xlink:href="#arrow-right-36"></use>
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

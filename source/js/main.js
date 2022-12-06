@@ -1,5 +1,9 @@
 import {initScrollBtn} from './modules/init-scroll-btn';
 import {initSliders} from './modules/sliders/main';
+import {initCustomSelect} from './modules/select/init-custom-select';
+import {initRangeFilter} from './modules/range-filter';
+
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+
   // Burger
 
   const mainBurger = document.querySelector('#burgerMainMenu');
@@ -18,12 +23,14 @@ window.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.toggle('menu-open');
   });
 
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initScrollBtn();
     initSliders();
-
+    initCustomSelect();
+    initRangeFilter();
   });
 });
 

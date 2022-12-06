@@ -1854,7 +1854,7 @@ body {
   }
 } */
 
-.projects__top {
+/* .projects__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1877,7 +1877,7 @@ body {
   .projects__top {
     margin-bottom: 1.25rem;
   }
-}
+} */
 
 .projects__arrows {
   display: flex;

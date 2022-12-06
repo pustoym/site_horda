@@ -1,9 +1,10 @@
 .project-item {
   $block: &;
   position: relative;
+  overflow: hidden;
   width: 410px;
   min-width: 410px;
-  border-radius: 10px;
+  border-radius: $border-radius;
   box-shadow: 0 0 11px -3px rgb(0 0 0 / 25%);
   user-select: none;
 
@@ -46,9 +47,9 @@
     }
   }
 
-  &__content {
+  // &__content {
 
-  }
+  // }
 
   &__headline {
     position: relative;
@@ -111,7 +112,7 @@
     }
   }
 
-  &__option {
+  // &__option {
 
-  }
+  // }
 }

@@ -4,7 +4,7 @@ const enableSwiper = (slider) => {
 
   let mySwiper = new Swiper(slider, {
     // modules: [Keyboard, Mousewheel],
-    slideClass: 'carousel__slide',
+    // slideClass: 'carousel__slide',
     slidesPerView: 'auto',
     spaceBetween: 11,
     breakpoints: {
