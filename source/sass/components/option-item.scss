@@ -1,13 +1,24 @@
 .option-item {
+  $block: &;
   display: flex;
   align-items: center;
+  color: $black;
   column-gap: 10px;
 
-  &__info {
-    color: #000000;
+  &__icon {
+    width: 25px;
+    height: 25px;
+
+    @include vp-767 {
+      width: 13px;
+      height: 13px;
+    }
   }
 
+  // &__text {}
+
   &__key {
+    margin: 0;
     font-weight: 200;
     font-size: 14px;
     line-height: 16px;
@@ -19,6 +30,7 @@
   }
 
   &__value {
+    margin: 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -29,19 +41,37 @@
     }
   }
 
-  &_material {
-    @include vp-767 {
-      order: 1;
+  &--text-big {
+    column-gap: 15px;
+    #{$block}__key {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+    #{$block}__value {
+      font-size: 32px;
+      line-height: 38px;
+
+      @include vp-767 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+
+    #{$block}__icon {
+      width: 30px;
+      height: 30px;
     }
   }
 
-  svg {
-    width: 25px;
-    height: 25px;
-
+  &--material {
     @include vp-767 {
-      width: 13px;
-      height: 13px;
+      order: 1;
     }
   }
 }

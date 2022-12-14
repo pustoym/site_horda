@@ -18,3 +18,25 @@
     }
   }
 }
+
+.zchbLink {
+  position: relative;
+  user-select: none;
+  transition:
+    opacity $trans-default,
+    top $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    top: 2px;
+  }
+}
+
+.zchbHead {
+  span {
+    color: #ff2e40;
+  }
+}
