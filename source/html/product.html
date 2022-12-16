@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @@include("source/html/base/head.html",{
+  "title": 'Кентукки — Авторский проект СК «Хорда»',
+  "description": 'Примерная стоимость от 7 800 000 ₽',
+  })
+  <script async src="https://zachestnyibiznes.ru/js/zchb-widget.js"></script>
+</head>
+
+<body class="no-js">
+  @@include("source/html/base/webp-polyfill.html")
+  <div style="display: none;">
+    @@include("build/img/sprite.svg")
+  </div>
+
+  <div class="wrapper">
+    @@include("source/html/base/header.html",{
+    "mod": "text-white",
+    "btnMod": "bg-blurry"
+    })
+
+    <main>
+      <div class="main-block">
+        <div class="main-block__decor-img-wrap">
+          <img class="main-block__bg-img" src="@img/bg/product-bg.jpg"
+               alt="Верхняя часть одного из реализованного проекта СК «Хорда»">
+        </div>
+
+        <div class="container">
+          <section class="product">
+              <div class="product__inner">
+                <a href="/projects.html" class="product__backlink">
+                  <svg width="21" height="4" aria-hidden="true">
+                    <use xlink:href="#arrow-right-21"></use>
+                  </svg>
+                  Ко всем проектам
+                </a>
+                <div class="product__name-group">
+                  <p class="product__name-type">Авторский проект</p>
+                  <h1 class="product__name">Кентукки</h1>
+                </div>
+                <div class="product__price-group">
+                  <p class="product__price-before">примерная стоимость от</p>
+                  <p class="product__price">7&nbsp;800&nbsp;000&nbsp;₽</p>
+                  <button class="product__price-link" type="button">что входит в стоимость?</button>
+                </div>
+                <div class="product__option-group">
+                  <div class="option-item  option-item--text-big">
+                    <svg class="option-item__icon" width="30" height="30" aria-hidden="true">
+                      <use xlink:href="#icon-square"></use>
+                    </svg>
+                    <div class="option-item__text">
+                      <p class="option-item__key">Площадь</p>
+                      <p class="option-item__value">405 м2</p>
+                    </div>
+                  </div>
+                  <div class="option-item option-item--text-big">
+                    <svg class="option-item__icon" width="30" height="30" aria-hidden="true">
+                      <use xlink:href="#icon-material"></use>
+                    </svg>
+                    <div class="option-item__text">
+                      <p class="option-item__key">Материал стен</p>
+                      <p class="option-item__value">Газоблок</p>
+                    </div>
+                  </div>
+
+                  <div class="option-item  option-item--text-big">
+                    <svg class="option-item__icon" width="30" height="30" aria-hidden="true">
+                      <use xlink:href="#icon-bed"></use>
+                    </svg>
+                    <div class="option-item__text">
+                      <p class="option-item__key">Спальни</p>
+                      <p class="option-item__value">4</p>
+                    </div>
+                  </div>
+
+                  <div class="option-item  option-item--text-big">
+                    <svg class="option-item__icon" width="30" height="30" aria-hidden="true">
+                      <use xlink:href="#icon-bath"></use>
+                    </svg>
+                    <div class="option-item__text">
+                      <p class="option-item__key">Санузлы</p>
+                      <p class="option-item__value">3</p>
+                    </div>
+                  </div>
+
+                  <div class="option-item  option-item--text-big">
+                    <svg class="option-item__icon" width="30" height="30" aria-hidden="true">
+                      <use xlink:href="#icon-floor"></use>
+                    </svg>
+                    <div class="option-item__text">
+                      <p class="option-item__key">Этажность</p>
+                      <p class="option-item__value">2</p>
+                    </div>
+                  </div>
+
+                  <div class="option-item  option-item--text-big">
+                    <svg class="option-item__icon" width="30" height="30" aria-hidden="true">
+                      <use xlink:href="#icon-calendar"></use>
+                    </svg>
+                    <div class="option-item__text">
+                      <p class="option-item__key">Срок возведения</p>
+                      <p class="option-item__value">2 месяца</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="product__tm-group">
+                <div class="product__media">
+                  @@include("source/html/blocks/product-gallery.html",{})
+                </div>
+                <div class="product__text">
+                  <p>Таким образом консультация с широким активом требуют от нас анализа форм развития. С другой стороны
+                    укрепление и развитие структуры в значительной степени обуславливает создание системы обучения
+                    кадров, соответствует насущным потребностям.</p>
+                  <p>Таким образом консультация с широким активом требуют от нас анализа форм развития. С другой стороны
+                    укрепление и развитие структуры в значительной степени обуславливает создание системы обучения
+                    кадров, соответствует насущным потребностям.</p>
+
+                  <dl class="product__dl desc-list">
+                    <div class="desc-list__group">
+                      <dt class="desc-list__term">Жилая площадь</dt>
+                      <dd class="desc-list__desc"><span>147</span> м<sup>2</sup></dd>
+                    </div>
+                    <div class="desc-list__group">
+                      <dt class="desc-list__term">Габариты с террасами</dt>
+                      <dd class="desc-list__desc"><span>21,25</span> х <span>15,85</span></dd>
+                    </div>
+                    <div class="desc-list__group">
+                      <dt class="desc-list__term">Площадь террас и балконов</dt>
+                      <dd class="desc-list__desc"><span>48</span> м<sup>2</sup></dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    @@include("source/html/base/footer.html", {
+    "footerActivePage": "projects",
+    })
+    @@include("source/html/blocks/scroll-top-btn.html",{})
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

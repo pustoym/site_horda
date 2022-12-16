@@ -1,0 +1,38 @@
+.desc-list {
+  color: #353535;
+
+  &__group {
+    display: flex;
+    align-items: first baseline;
+    column-gap: 20px;
+
+    @include vp-767 {
+      column-gap: 10px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+
+      @include vp-767 {
+        margin-bottom: 22px;
+      }
+    }
+  }
+
+  &__term {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+
+    @include vp-767 {
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+}

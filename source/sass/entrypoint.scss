@@ -6,6 +6,7 @@
 @import "vendor/legacy.css";
 @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/swiper/modules/pagination/pagination";
+@import "../../node_modules/swiper/modules/navigation/navigation";
 
 
 // Global
@@ -44,6 +45,10 @@
 @import "components/custom-radio";
 @import "components/custom-range";
 
+// product page
+
+@import "sections/product";
+@import "components/desc-list";
 
 // Sections
 // ---------------------------------

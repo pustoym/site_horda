@@ -10,6 +10,11 @@
     padding-top: 72px;
   }
 
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -109,13 +114,18 @@
     }
   }
 
-  &__bg-img {
+  &__decor-img-wrap {
+    @include min-height-vh(100);
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1;
+    z-index: 0;
+    max-height: 857px;
+  }
+
+  &__bg-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
