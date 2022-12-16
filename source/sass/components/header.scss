@@ -78,7 +78,7 @@
     .menu__link {
       color: $white;
 
-      @include vp-767 {
+      @include vp-991 {
         color: $black;
       }
     }

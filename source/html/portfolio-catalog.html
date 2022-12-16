@@ -3,7 +3,7 @@
 
 <head>
   @@include("source/html/base/head.html",{
-    "title": 'Проекты СК «Хорда»',
+    "title": 'Портфолио СК «Хорда»',
     "description": 'Реализовали более 150 проектов в МО',
   })
 </head>
@@ -16,19 +16,23 @@
 
   <div class="wrapper">
     @@include("source/html/base/header.html",{
-      "headerActiveLinkIndex": 0,
       "mod": "text-white",
+      "btnMod": "bg-blurry"
     })
 
     <main>
-      <section class="main-block">
+      <section class="main-block main-block_grid-inner">
         <div class="main-block__decor-img-wrap">
-          <img class="main-block__bg-img" src="@img/bg/bg-page_projects.jpg" alt="Верхняя часть одного из реализованного проекта СК «Хорда»">
+          <img class="main-block__bg-img" src="@img/bg/portfolio-catalog-bg.jpg">
         </div>
-
-        @@include("source/html/blocks/filter.html",{})
+        <div class="container">
+          <div class="main-block__content">
+            <h1 class="main-block__title">Наши построенные объекты</h1>
+            <p class="main-block__text">Таким образом консультация с широким активом требуют от нас анализа форм развития. </p>
+          </div>
+        </div>
       </section>
-      <section class="projects projects_top-overlapping">
+      <section class="projects projects_top-overlapping-xl">
         <div class="projects__container">
           <div class="projects__top">
             <h2 class="projects__title visually-hidden">
