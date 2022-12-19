@@ -54,6 +54,14 @@
     }
 
     svg {
+      color: #060606;
+      fill: #555555;
+
+      @include vp-991 {
+        color: $white;
+        fill: #e0e0e0;
+      }
+
       @include vp-767 {
         width: 140px;
         height: auto;
@@ -82,9 +90,33 @@
         color: $black;
       }
     }
+
+    #{$block}__logo svg {
+      color: $white;
+      fill: $white;
+    }
+
     #{$block}__button {
       border-color: $white;
       color: $white;
+    }
+  }
+
+  &--text-black {
+    .icon-menu i,
+    .icon-menu::after,
+    .icon-menu::before {
+      background-color: $black;
+    }
+
+    #{$block}__logo svg {
+      color: $black;
+      fill: #343434;
+    }
+
+    #{$block}__button {
+      border-color: $black;
+      color: $black;
     }
   }
 }
