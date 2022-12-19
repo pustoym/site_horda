@@ -1,0 +1,144 @@
+.documents {
+  padding-top: 70px;
+
+  @include vp-767 {
+    padding-top: 50px;
+  }
+
+  .container {
+    max-width: 1090px;
+  }
+
+  &__title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 295px;
+      height: 2px;
+      background-color: $green;
+
+      @include vp-767 {
+        width: 193px;
+      }
+    }
+  }
+
+  &__dsc {
+    max-width: 48.6%;
+    font-size: 20px;
+    line-height: 23px;
+
+    @include vp-991 {
+      max-width: 66%;
+    }
+
+    @include vp-767 {
+      max-width: none;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__list {
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 23px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+    padding: 30px 0;
+    column-gap: 30px;
+
+    @include vp-767 {
+      min-height: 78px;
+      padding: 20px 0;
+      column-gap: 10px;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #efefef;
+    }
+  }
+
+  &__doc-dsc {
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 23px;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__link-download {
+    flex-shrink: 0;
+    width: 190px;
+    min-height: 60px;
+    font-size: 16px;
+    line-height: 19px;
+
+    @include vp-767 {
+      width: 48px;
+      height: 48px;
+      min-height: auto;
+      padding: 0;
+      border-radius: 50%;
+    }
+  }
+
+  &__link-view {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 50%;
+
+    @include vp-767 {
+      width: 48px;
+      height: 48px;
+    }
+
+    svg {
+      @include vp-767 {
+        width: 18px;
+        height: auto;
+      }
+    }
+  }
+
+  &__link-text {
+    @include vp-767 {
+      @include hide-text;
+    }
+  }
+}
